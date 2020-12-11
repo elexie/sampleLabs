@@ -1,0 +1,473 @@
+/*font imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed');
+
+/*keyframes*/
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+html,body{
+margin:0;
+width: 100%;
+height: 100%; /* orginially 350% */
+display: flex;
+flex-direction: column;
+
+background-color:white;
+
+opacity:;
+}
+
+#navBar
+{
+width:100%;
+height:10%;
+/* background: red; */
+background-color:#fafafa;
+
+}
+
+#dropDownDiv
+{
+/*background: #282828;*/
+background: transparent;
+height: 25vh;
+width: 11vw;
+top:7.2%;
+left: 62%;
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity:;
+z-index:;
+display: none;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+padding-left: 3.8%;
+padding-top:1.5%;
+}
+#builder:hover #dropDownDiv{
+	opacity: 1;
+
+}
+
+
+#topLeftMenu{
+  position: relative;
+  left: 0%;
+  width: 90%;
+  height: 100%;
+  /* border: 1px solid pink; */
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+#headerText{
+  width: 86%;
+  height: 100%;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: flex-end;
+}
+#headerText p{
+  text-transform:uppercase;
+  align-self:center;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  word-spacing: .3em;
+  position: relative;
+  right: 0;
+  color:;
+}
+#nameDiv{
+width:14%;
+height: 100%;
+/* border: 1px solid blue; */
+position: relative;
+align-self: flex-start;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+#initial{
+color: white;
+background: dimgray;
+font-size: 1.5em;
+padding: .1em .3em .1em .3em;
+border: 1px solid dimgray;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+text-transform: uppercase;
+font-family: roboto;
+}
+
+#topRightMenu{
+  position: relative;
+  width: 0%;
+  height: 100%;
+  /* border: 1px solid brown; */
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  cursor: ;
+}
+#topRightMenuWrapper{
+width: 100%;
+height: 100%;
+align-self: flex-end;
+/* border: 1px solid pink; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#topRightUl{
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: ;
+  /* align-self: flex-end; */
+}
+#topRightUl li{
+  display: inline;
+  font-size: 1.2em;
+  padding-left: 1em;
+  cursor: pointer;
+  color: rgba(0,0,0,0.7);
+
+}
+input{
+  border: none;
+  background-color: rgba(0,0,0,0.2);
+  width: 10vw;
+  height: 5.2vh;
+  font-family: 'arial', sans-serif;
+  transition: width 0.4s linear;
+  font-size:.7em;
+  background-image: url("../icons/search.png");
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 3em;
+}
+input:focus{
+outline:none;
+width: 15vw;
+}
+a
+{
+text-decoration: none;
+color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#blankSpaceRow
+{
+  width:100%;
+  height:6%;
+  /* background: blue; */
+
+border-bottom:4px solid #fafafa;
+}
+
+  #blankSpaceRow_contents{
+    width:100%;
+    height:100%;
+
+    display: flex;
+    flex-direction: column;
+
+/**
+to allow blankSpaceRow_contents_ulDiv to sit above the contentBox
+*/
+    align-items: flex-end;
+    justify-content: ;
+  }
+    #blankSpaceRow_contents_ulDiv{
+      width:80%;
+      height:100%;
+
+      border: 2px solid white;
+    }
+      #blankSpaceRow_contents_ul{
+        display: ;
+        list-style-type: none;
+      }
+        #blankSpaceRow_contents_ul li{
+          color: steelblue;
+          font-family: arial;
+          text-transform: ;
+          font-size: .9em;
+          display: inline;
+
+          padding-left:4em;
+
+        }
+        #blankSpaceRow_contents_ul li:hover{
+          cursor: pointer;
+          color: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+        }
+#leftRight{
+  width: 100%;
+  height: 84%;
+  /**
+this is because #navBar and #blankSpaceRow add to 30%
+  */
+
+  display: flex;
+  flex-direction: row;
+  /**
+so that left (#profileBox) and right(#contentBox)
+can share the same space horizontally
+*/
+}
+
+    #profileBox_parent
+    {
+      width:20%;
+      /**
+    20% of it's parent's (#leftRight) width
+    */
+      height:100%;
+      /* background: yellow; */
+      /**
+    100% of it's parent's (#leftRight) height
+    */
+
+    /**
+for how this div will display it's own elements via flexBox
+    */
+    display: ;
+    flex-direction: ;
+    background:#fafafa;
+    }
+
+
+
+                  #profileBoxContents{
+                    width:100%;
+                    height: 100%;
+                    /**
+                for how this div will display it's own elements via flexBox
+                    */
+                    display:flex;
+                    flex-direction:column;
+                  }
+                      #profileCircle{
+                        width:100%;
+                        height:28%;
+                        background: ;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                      }
+                          #actualProfileCirlce{
+                            width:49%;
+                            height:80%;
+
+                            border-radius:100%;
+                            border:2px solid white;
+
+                            background-repeat: no-repeat;
+/* background-position: center; */
+background-size: cover;
+background-image: url("../images/gates.jpg");
+
+                          }
+
+                      #name{
+                        width:100%;
+                        height:4%;
+                        background: ;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        padding-left: 30%
+                      }
+                      #occupation{
+                        width:100%;
+                        height:4%;
+                        /* background: yellow; */
+
+                        border-top: 1px solid steelblue;
+                        border-bottom: 1px solid steelblue;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        padding-left: 12%
+                      }
+                      #shortBio{
+                        width:100%;
+                        height:40%;
+                        /* background: green; */
+
+                        overflow: ;
+                        word-wrap: break-word;
+
+                        padding-left: 4%
+                      }
+                      #tags{
+                        width:100%;
+                        height:15%;
+                        /* background: purple; */
+                        padding-left: 4%;
+                      }
+                          .userProfileTagsSpan{
+                            text-transform: lowercase;                         color:steelblue
+                          }
+
+
+    #contentBox{
+      width:80%;
+      /**
+    80% of it's parent's (#leftRight) width
+    */
+      height:100%;
+      /* background: green; */
+      /**
+    100% of it's parent's (#leftRight) height
+    */
+
+    /**
+for how this div will display it's own elements via flexBox
+    */
+    display: ;
+    flex-direction: ;
+    }
+          #contentBoxContents{
+            width: 100%;
+            height: 100%;
+
+            overflow-x:hidden ;
+            /**
+            although this is not the element with
+            out of bounds width, this allows its
+            child element (element with out of bounds width)
+            to function
+            */
+          }
+              #contentBoxContents_tabbedMenuBar{
+
+              }
+              #contentBoxContents_tabbedMenuBarBody{
+                width: 700%;
+                height: 100%;
+                /* background: gray; */
+
+
+                display: flex;
+                flex-direction: row;
+                background: pink;
+                overflow-x: ;
+              }
+
+                      .tabbedItem{
+                        width: 100%;
+                        height: 100%;
+                        /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite; */
+
+                      }
+                      @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+                        #feedItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #datasetItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #scriptsItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #notebooksItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #annotationItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #environmentItem{
+                          width: 100%;
+                          height: 100%;
+                        }
+                        #papaersItem{
+                          width: 100%;
+                          height: 100%;
+                        }
